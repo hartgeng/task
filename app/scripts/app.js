@@ -24,7 +24,8 @@ angular
         url: '/index',
         views: {
           '': {
-            templateUrl: 'layout/index.html'
+            templateUrl: 'layout/index.html',
+            controller: 'IndexCtrl'
           },
           'topbar@index': {
             templateUrl: 'layout/header.html'
@@ -38,7 +39,7 @@ angular
         }
       })
       .state('index.about', {
-        url: 'about',
+        url: '/about',
         views: {
           'mains@index': {
             templateUrl: 'views/about.html'

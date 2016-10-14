@@ -1,0 +1,62 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+.header{
+  border:none;
+  background: $black;
+  .logo{
+    display: block;
+    width:160px;
+    height:60px;
+    margin:0 20px;
+    background:url(../images/logo.png) no-repeat center center;
+    background-size:auto 50px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .navbar-default{
+    background:transparent;
+    border:none;
+    li{
+      a{
+        height:$navbar-height;
+        line-height:$navbar-height;
+        padding:0 25px;
+        color:$navbar-default-link-color;
+        @include transition(background-color .3s);
+        &:hover,&:focus{
+          color:$navbar-default-link-color;
+          background:$navbar-default-link-active-bg;
+        }
+      }
+      &.active{
+        a{
+          color: $navbar-default-link-active-color;
+          background:$navbar-default-link-active-bg;
+          &:hover,&:focus{
+            color: $navbar-default-link-active-color;
+            background:$navbar-default-link-active-bg;
+          }
+        }
+      }
+    }
+  }
+  .header-avator, .open{
+    .dropdown-toggle{
+      background-color: transparent!important;
+      &:hover{
+        background-color: transparent;
+      }
+      .img-circle{
+        width:28px;
+        height:28px;
+        border:2px solid #adb0b1;
+      }
+      &:hover{
+        .img-circle{
+          border-color:$link-hover-color;
+        }
+      }
+    }
+  }
+}
