@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e315c94a-f114-4c73-8e0b-eb9224eecef9" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/footer-sprite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/layout/footer.html" afterPath="$PROJECT_DIR$/app/layout/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/layout/index.html" afterPath="$PROJECT_DIR$/app/layout/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/layout/main.html" afterPath="$PROJECT_DIR$/app/layout/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/index.controller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/index.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/layout.scss" afterPath="$PROJECT_DIR$/app/styles/layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
     </list>
     <ignored path="task.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/index.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05357143">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.7125">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -111,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/layout/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.178125">
-              <caret line="3" column="7" selection-start-line="2" selection-start-column="68" selection-end-line="3" selection-end-column="7" />
+            <state vertical-scroll-proportion="-0.6785714">
+              <caret line="2" column="109" selection-start-line="2" selection-start-column="109" selection-end-line="2" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -164,8 +157,8 @@
         <option value="$PROJECT_DIR$/app/layout/index.html" />
         <option value="$PROJECT_DIR$/app/styles/layout.scss" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/index.controller.js" />
         <option value="$PROJECT_DIR$/app/layout/main.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/index.controller.js" />
       </list>
     </option>
   </component>
@@ -872,18 +865,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/index.controller.js">
+    <entry file="file://$PROJECT_DIR$/app/layout/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05357143">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="42" />
+        <state vertical-scroll-proportion="-0.6785714">
+          <caret line="2" column="109" selection-start-line="2" selection-start-column="109" selection-end-line="2" selection-end-column="109" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/layout/main.html">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/index.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.178125">
-          <caret line="3" column="7" selection-start-line="2" selection-start-column="68" selection-end-line="3" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.7125">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding />
         </state>
       </provider>
