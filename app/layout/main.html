@@ -1,5 +1,9 @@
-<aside>left</aside>
-<div class="main">
+<div class="aside">
+  <ul class="sideNav">
+    <li ng-class='{"active" : stuFn.param.isFinish === "item.link"}' ng-repeat="item in items"><a  ui-sref="#" title="{{item.name}}">{{item.name}} <span class="badge">{{item.num}}</span></a></li>
+  </ul>
+</div>
+<div>
   center
   <p>111</p>
   <p>222</p>
