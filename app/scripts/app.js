@@ -30,14 +30,27 @@ angular
           'topbar@index': {
             templateUrl: 'layout/header.html'
           },
+          'aside@index': {
+            templateUrl: 'layout/aside.html'
+          },
           'mains@index': {
-            templateUrl: 'layout/main.html'
+            templateUrl: 'course/courseList.html'
           },
           'foot@index': {
             templateUrl: 'layout/footer.html'
           }
         }
       })
+      .state('index.all', {
+        parent: 'index',
+        url: '/:links',
+        views: {
+          'mains@index': {
+            templateUrl: 'course/courseList.html'
+          }
+        }
+      })
+
       .state('index.about', {
         url: '/about',
         views: {

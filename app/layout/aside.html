@@ -1,0 +1,6 @@
+<ul class="sideNav">
+  <li ng-class='{"active" : astuFn.param.isAside === "{{item.links}}"}', ng-repeat="item in items"  ng-click='astuFn.aside(item.links)', ui-sref="index.all({links:item.links})">
+    {{item.name}}
+    <span class="badge">{{item.num}}</span>
+  </li>
+</ul>
