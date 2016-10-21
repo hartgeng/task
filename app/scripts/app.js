@@ -50,12 +50,21 @@ angular
           }
         }
       })
-
-      .state('index.about', {
-        url: '/about',
+      .state('index.course', {
+        url: '/course/:id',
         views: {
+          '': {
+            templateUrl: 'layout/index.html',
+            controller: 'TeactherCtrl'
+          },
+          'topbar@index': {
+            templateUrl: 'layout/header.html'
+          },
           'mains@index': {
-            templateUrl: 'views/about.html'
+            templateUrl: 'course/courseList.html'
+          },
+          'foot@index': {
+            templateUrl: 'layout/footer.html'
           }
         }
       })
