@@ -1,6 +1,8 @@
+@import '_mixin.scss';
+@import '_variables.scss';
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 .browsehappy {
   margin: 0.2em 0;
@@ -9,14 +11,21 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
-body {
+body, html{
   padding: 0;
+  margin: 0;
+  font-family:$font-family-base;
+  font-size:$font-size-base;
 }
-
+.l{
+  float:left;
+}
+.r{
+  float:right;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
-.footer {
+.marketing{
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -37,11 +46,80 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  background:$black;
+  font-size:12px;
+  color:$gray-dark;
+  padding:27px 0;
+  min-width:620px;
+  margin-top:60px;
+  .foot{
+    margin-left:20px;
+    .footLink {
+      margin-bottom: 4px;
+      line-height: 1.8;
+      overflow: hidden;
+      ul{
+        margin:0;
+        padding:0;
+      }
+      li {
+        margin-right: 30px;
+        text-align: center;
+        float: left;
+        display:inline;
+        a:link, a:visited, a:active {
+          color: #c8cdd2;
+        }
+        a:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .followus {
+    margin-right: 34px;
+    padding-left: 30px;
+    a{
+      float: left;
+      position: relative;
+      width: 32px;
+      height: 32px;
+      background-image: url(../images/footer-sprite.png);
+      background-repeat: no-repeat;
+      margin: 3px 6px 0;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      -webkit-transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+      &:hover {
+         opacity: 1;
+         filter: alpha(opacity=100);
+        .flw-weixin-box {
+          display: block;
+        }
+       }
+    }
+    .flw-weixin-box {
+      position: absolute;
+      display: none;
+      width: 170px;
+      height: 220px;
+      left: -69px;
+      bottom: 35px;
+      background: url(../images/footer-sprite.png) no-repeat 0 0;
+    }
+    .followus-weixin {
+      background-position: 0 -279px;
+    }
+    .followus-weibo {
+      background-position: 0 -321px;
+    }
+    .followus-qzone {
+      background-position: 0 -363px;
+    }
+  }
 }
-
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -89,5 +167,3 @@ body {
   }
 }
 @import "layout.scss";
-//@import '_mixin.scss';
-//@import '_variables.scss';

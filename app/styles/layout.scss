@@ -1,0 +1,223 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+.header{
+  border:none;
+  background: $black;
+  .logo{
+    display: block;
+    width:160px;
+    height:60px;
+    margin:0 20px;
+    background:url(../images/logo.png) no-repeat center center;
+    background-size:auto 50px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .navbar-default{
+    background:transparent;
+    border:none;
+    li{
+      a{
+        height:$navbar-height;
+        line-height:$navbar-height;
+        padding:0 25px;
+        color:$navbar-default-link-color;
+        @include transition(background-color .3s);
+        &:hover,&:focus{
+          color:$navbar-default-link-color;
+          background:$navbar-default-link-active-bg;
+        }
+      }
+      &.active{
+        a{
+          color: $navbar-default-link-active-color;
+          background:$navbar-default-link-active-bg;
+          &:hover,&:focus{
+            color: $navbar-default-link-active-color;
+            background:$navbar-default-link-active-bg;
+          }
+        }
+      }
+    }
+  }
+  .header-avator, .open{
+    .dropdown-toggle{
+      background-color: transparent!important;
+      &:hover{
+        background-color: transparent;
+      }
+      .img-circle{
+        width:28px;
+        height:28px;
+        border:2px solid #adb0b1;
+      }
+      &:hover{
+        .img-circle{
+          border-color:$link-hover-color;
+        }
+      }
+    }
+  }
+}
+.aside{
+  width:250px;
+  margin:0 20px;
+  float:left;
+  display:inline;
+  border-radius:4px;
+  border-bottom:1px solid #e5e5e5;
+  position:relative;
+  margin-right:-270px;
+  ul{
+    padding: 0;
+    margin: 0;
+    li{
+      cursor: pointer;
+      height:58px;
+      float: left;
+      line-height:58px;
+      padding:0 10px;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-bottom: none;
+      font-size:$font-size-base;
+      width:100%;
+      display: inline-block;
+      a{
+        color:#333;
+      }
+      .badge{
+        float: right;
+        display: inline;
+        margin-top: 15px;
+        color:#333;
+        font-weight:normal;
+        background: transparent;
+      }
+      &.active{
+        color:#fff;
+        background-color:#fe742b;
+        a, .badge{
+          color:#fff;
+        }
+        &:hover{
+          background-color:#fe742b;
+        }
+      }
+      &:hover{
+        background-color:#eee;
+      }
+    }
+  }
+}
+.panel-body{
+  padding:0 15px;
+  float:right;
+  width:100%;
+  padding-left:290px;
+  .ht-tabs{
+    height:35px ;
+    ul{
+      float: right;
+      li{
+        display: inline;
+        a{
+          padding: 0 15px;
+          @include border-radius(5px);
+          display:inline-block;
+        }
+        &.active a{
+          color:#fff;
+          background-color:#fe742b;
+        }
+      }
+    }
+  }
+}
+.list-thum-cross{
+  color:#2a2727;
+  background:$list-group-bg;
+  padding:15px;
+  margin-bottom:20px;
+  cursor: pointer;
+  font-size:$font-size-micro;
+  @include border-radius(5px);
+  @include box-shadow2(0px 1px 3px rgba(0, 0, 0, 0.1));
+  position:relative;
+  &:hover{
+    background-color:#fafafa;
+    .info-title-tit{
+      color:#499E50;
+    }
+  }
+  .list-thum-img{
+    position: relative;
+    float: left;
+    width: 225px;
+    margin-right: -225px;
+    border: 1px solid #fff;
+  }
+  .list-thum-info{
+    float: right;
+    width: 100%;
+    padding-left:280px;
+  }
+  .info-title{
+    font-size:$font-size-base;
+    .info-title-tit{
+      float:left;
+      display:inline;
+      .tag {
+        font-size:$font-size-microSmall;
+        margin-left:15px;
+        padding:1px 5px;
+        display:inline-block;
+        color:#fff;
+        cursor:pointer;
+        background-color:#fe742b;
+        @include border-radius(4px);
+        &:hover{
+          @include opacity(0.8);
+          color:#fff;
+        }
+      }
+    }
+    .info-title-over{
+      @include border-radius(9px);
+      background-color:#f0f0f0;
+      padding:0 9px 0 2px;
+      margin-top:3px;
+      height: 18px;
+      line-height: 18px;
+      float: right;
+      color: #499E50;
+      font-size:$font-size-micro;
+    }
+  }
+  .list-thum-nowrp{
+    color:#999;
+    .glyphicon{
+      margin-right: 20px;
+    }
+    .hot, .group{
+      margin-right:20px;
+    }
+    a{
+      color:#999;
+      margin-right:10px;
+      &:hover{
+        color:#499E50;
+      }
+    }
+  }
+  .list-thum-cen{
+    text-align:left;
+    color:#999;
+    line-height:22px;
+    height:84px;
+    overflow:hidden;
+    font-size:14px;
+    margin:15px 10px 0 0;
+  }
+}

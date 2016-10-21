@@ -1,3 +1,6 @@
 <div ui-view="topbar"></div>
-<main ui-view="mains"></main>
-<div ui-view="foot"></div>
+<main class="main clearfix">
+  <aside ui-view="aside" class="aside"></aside>
+  <div ui-view="mains" class="panel-body clearfix"></div>
+</main>
+<div ui-view="foot" class="footer clearfix"></div>

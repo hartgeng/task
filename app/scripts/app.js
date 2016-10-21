@@ -24,40 +24,48 @@ angular
         url: '/index',
         views: {
           '': {
-            templateUrl: 'layout/index.html'
+            templateUrl: 'layout/index.html',
+            controller: 'IndexCtrl'
           },
           'topbar@index': {
             templateUrl: 'layout/header.html'
           },
+          'aside@index': {
+            templateUrl: 'layout/aside.html'
+          },
           'mains@index': {
-            templateUrl: 'layout/main.html'
+            templateUrl: 'course/courseList.html'
           },
           'foot@index': {
             templateUrl: 'layout/footer.html'
           }
         }
       })
-      .state('index.about', {
-        url: 'about',
+      .state('index.all', {
+        parent: 'index',
+        url: '/:links',
         views: {
           'mains@index': {
-            templateUrl: 'views/about.html'
+            templateUrl: 'course/courseList.html'
           }
         }
       })
-
-    //$routeProvider
-    //  .when('/', {
-    //    templateUrl: 'views/main.html',
-    //    controller: 'MainCtrl',
-    //    controllerAs: 'main'
-    //  })
-    //  .when('/about', {
-    //    templateUrl: 'views/about.html',
-    //    controller: 'AboutCtrl',
-    //    controllerAs: 'about'
-    //  })
-    //  .otherwise({
-    //    redirectTo: '/'
-    //  });
+      .state('index.course', {
+        url: '/course/:id',
+        views: {
+          '': {
+            templateUrl: 'layout/index.html',
+            controller: 'TeactherCtrl'
+          },
+          'topbar@index': {
+            templateUrl: 'layout/header.html'
+          },
+          'mains@index': {
+            templateUrl: 'course/courseList.html'
+          },
+          'foot@index': {
+            templateUrl: 'layout/footer.html'
+          }
+        }
+      })
   });
