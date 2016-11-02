@@ -30,9 +30,6 @@ angular
           'topbar@index': {
             templateUrl: 'layout/header.html'
           },
-          'aside@index': {
-            templateUrl: 'layout/aside.html'
-          },
           'mains@index': {
             templateUrl: 'course/courseList.html'
           },
@@ -51,21 +48,24 @@ angular
         }
       })
       .state('index.course', {
+        parent: 'index',
         url: '/course/:id',
+        views: {
+          'mains@index': {
+            templateUrl: 'course/courseActive.html'
+          },
+        }
+      })
+      .state('university', {
+        url: '/university',
         views: {
           '': {
             templateUrl: 'layout/index.html',
-            controller: 'TeactherCtrl'
-          },
-          'topbar@index': {
-            templateUrl: 'layout/header.html'
+            controller: 'UniversityCtrl'
           },
           'mains@index': {
-            templateUrl: 'course/courseList.html'
+            templateUrl: 'course/courseActive.html'
           },
-          'foot@index': {
-            templateUrl: 'layout/footer.html'
-          }
         }
       })
   });

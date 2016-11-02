@@ -10,19 +10,20 @@ angular.module('taskApp')
         }
       }
       $scope.items = [
-        {name: "全部课程", num: 1973, links:"all"},
-        {name: "文学艺术", num: 271, links:"wxys"},
-        {name: "哲学历史", num: 136, links:"zxls"},
-        {name: "经管法学", num: 180, links:"jgfx"},
-        {name: "基础科学", num: 943, links:"jckx"},
-        {name: "工程技术", num: 788, links:"gcjs"},
-        {name: "农林医药", num: 124, links:"nlyy"},
-        {name: "大学先修课", num: 31, links:"dxxxk"}
+        {name: "全部课程", num: 1973, links:"all", id:1},
+        {name: "文学艺术", num: 271, links:"wxys", id:2},
+        {name: "哲学历史", num: 136, links:"zxls", id:3},
+        {name: "经管法学", num: 180, links:"jgfx", id:4},
+        {name: "基础科学", num: 943, links:"jckx", id:5},
+        {name: "工程技术", num: 788, links:"gcjs", id:6},
+        {name: "农林医药", num: 124, links:"nlyy", id:7},
+        {name: "大学先修课", num: 31, links:"dxxxk", id:8}
       ];
       $scope.courseList = [
         {
           id:1,
           name: "大学英语（口语）",
+          class:[{class1:1,class2:3,class3:5}],
           courseCover: "images/pic1.png",
           num: 1973,
           scholarship:true,
@@ -219,8 +220,8 @@ angular.module('taskApp')
       var astuFn = $scope.astuFn = {
         param:{isAside:'all'},
         aside : function (status) {
+          astuFn.param.isAside = status.links ;
           var that = this;
-          astuFn.param.isAside = status ;
-        }
+        },
       }
     })
