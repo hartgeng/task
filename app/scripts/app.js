@@ -63,8 +63,23 @@ angular
             templateUrl: 'layout/index.html',
             controller: 'UniversityCtrl'
           },
-          'mains@index': {
-            templateUrl: 'course/courseActive.html'
+          'topbar@university': {
+            templateUrl: 'layout/header.html'
+          },
+          'mains@university': {
+            templateUrl: 'university/view.html'
+          },
+          'foot@university': {
+            templateUrl: 'layout/footer.html'
+          }
+        }
+      })
+      .state('university.list', {
+        parent: 'university',
+        url: '/:link',
+        views: {
+          'mains@university': {
+            templateUrl: 'university/school.html'
           },
         }
       })

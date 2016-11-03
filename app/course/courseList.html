@@ -1,39 +1,41 @@
-<aside ui-view="aside" class="aside">
-  <ul class="sideNav">
-    <li ng-class='{"active" : astuFn.param.isAside === "{{item.links}}"}', ng-repeat="item in items"  ng-click='astuFn.aside(item)', ui-sref="index.all({links:item.links})">
-      {{item.name}}
-      <span class="badge">{{item.num}}</span>
-    </li>
-  </ul>
-</aside>
-<div  class="panel-body clearfix">
-  <div class="ht-tabs">
-    <ul>
-      <li class="active"><a href="#">全部</a></li>
-      <li><a href="#">正在进行</a></li>
-      <li><a href="#">即将开始</a></li>
-      <li><a href="#">已结束</a></li>
+<div class="main">
+  <aside ui-view="aside" class="aside">
+    <ul class="sideNav">
+      <li ng-class='{"active" : astuFn.param.isAside === "{{item.links}}"}', ng-repeat="item in items"  ng-click='astuFn.aside(item)', ui-sref="index.all({links:item.links})">
+        {{item.name}}
+        <span class="badge">{{item.num}}</span>
+      </li>
     </ul>
-  </div>
-  <div class="list-thum-cross clearfix" ng-repeat="info in courseList" ui-sref="index.course({id:info.id})">
-    <div class="list-thum-img">
-      <img src="{{info.courseCover}}" alt="{{info.name}}" height="150px" width="265px" />
+  </aside>
+  <div  class="panel-body clearfix">
+    <div class="ht-tabs">
+      <ul>
+        <li class="active"><a href="#">全部</a></li>
+        <li><a href="#">正在进行</a></li>
+        <li><a href="#">即将开始</a></li>
+        <li><a href="#">已结束</a></li>
+      </ul>
     </div>
-    <div class="list-thum-info">
-          <div class="info-title clearfix">
-            <p class="info-title-tit">{{info.name}}<a target="_blank" href="#" class="tag" ng-if="info.scholarship">奖学金</a></p>
-            <div class="info-title-over">
-              <span class="glyphicon glyphicon-dashboard"></span>
-              <span class="txt">进行至第{{info.onTime}}周，共{{info.time}}周</span>
-            </div>
+    <div class="list-thum-cross clearfix" ng-repeat="info in courseList" ui-sref="index.course({id:info.id})">
+      <div class="list-thum-img">
+        <img src="{{info.courseCover}}" alt="{{info.name}}" height="150px" width="265px" />
+      </div>
+      <div class="list-thum-info">
+        <div class="info-title clearfix">
+          <p class="info-title-tit">{{info.name}}<a target="_blank" href="#" class="tag" ng-if="info.scholarship">奖学金</a></p>
+          <div class="info-title-over">
+            <span class="glyphicon glyphicon-dashboard"></span>
+            <span class="txt">进行至第{{info.onTime}}周，共{{info.time}}周</span>
           </div>
-          <div class="list-thum-nowrp">
-            <span class="hot"><i class="glyphicon glyphicon-user"></i>{{info.num}}人参加</span>
-            <a class="group" href="#" target="_blank">{{info.group}}</a>
-            <a href="/teacther/{{infos.id}}" target="_blank" ng-repeat="infos in info.teacther">{{infos.name}}</a>
-            <a href="/teacther/{{teacthers.id}}" target="_blank" ng-repeat="teacthers in info.ortherTeacther">{{teacthers.name}}</a>
-          </div>
-          <div class="list-thum-cen">{{info.info}}</div>
+        </div>
+        <div class="list-thum-nowrp">
+          <span class="hot"><i class="glyphicon glyphicon-user"></i>{{info.num}}人参加</span>
+          <a class="group" href="#" target="_blank">{{info.group}}</a>
+          <a href="/teacther/{{infos.id}}" target="_blank" ng-repeat="infos in info.teacther">{{infos.name}}</a>
+          <a href="/teacther/{{teacthers.id}}" target="_blank" ng-repeat="teacthers in info.ortherTeacther">{{teacthers.name}}</a>
+        </div>
+        <div class="list-thum-cen">{{info.info}}</div>
+      </div>
     </div>
   </div>
 </div>
